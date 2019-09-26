@@ -7,21 +7,21 @@ public class MagicDetector {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Input a number: ");
-        if (isMagicalNumber(input.nextInt())) {
-            System.out.println("It's magic!"); 
-        }
-        else {
-            System.out.println("It's not magic..."); 
-        }
-        input.close();
+		if (isMagicalNumber(input.nextInt())) {
+		    System.out.println("It's magic!"); 
+		}
+		else {
+		    System.out.println("It's not magic..."); 
+		}
+		input.close();
 	}
 	
 	static public boolean isMagicalNumber(int number) {
 		int count = 0;
 		boolean hasSameDigits = true;
-		
-		int num = number;
 		int lastDigit = number % 10;
+		
+				int num = number;
 		while(num != 0) {
 			num = num / 10;
 			if(num % 10 != lastDigit) {
@@ -65,5 +65,5 @@ public class MagicDetector {
 		
 		return true;
 	}
-	}
+}
 
